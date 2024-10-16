@@ -24,6 +24,13 @@
 
     <script>
         // Example #1: Button Click Event
+        let buttonElement = document.querySelector('.button');
+
+        buttonElement.addEventListener("click", clickButtonDemo); // do not call function inside
+
+        function clickButtonDemo() {
+            console.log("Hello world");
+        }
     </script>
 
     <!-- Example #2: Input Keyup Event -->
@@ -31,6 +38,11 @@
 
     <script>
         // Example #2: Input Keyup Event
+        let input = document.querySelector('input');
+
+        input.addEventListener("keyup", (e) => {
+            console.log("key up: " + e.target.value);
+        });
     </script>
 
     <!-- Example #3: Mouse Enter Event -->
